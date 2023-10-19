@@ -33,14 +33,6 @@ interface RepositoryWithCollationInQuery: CrudRepository<SampleDocument, String>
     @Query(
         value = "{}",
         sort = """{ "value":  1}""",
-        collation = """
-        {
-            "locale": "de",
-            "numericOrdering": true,
-            "strength": 3,
-            "alternate": "shifted"
-        }
-        """
     )
     fun findAllCollationInAnnotation(): List<SampleDocument>
 

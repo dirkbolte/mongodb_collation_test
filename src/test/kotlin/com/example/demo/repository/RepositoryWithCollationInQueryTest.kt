@@ -22,7 +22,7 @@ class RepositoryWithCollationInQueryTest {
 
         @Container
         private val db =
-            MongoDBContainer("mongo:4").apply {
+            MongoDBContainer("mongo:6").apply {
                 waitingFor(Wait.forListeningPort().withStartupTimeout(Duration.ofSeconds(20L)))
                 start()
             }
